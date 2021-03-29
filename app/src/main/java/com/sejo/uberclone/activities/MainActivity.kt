@@ -1,13 +1,12 @@
 package com.sejo.uberclone.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.appcompat.widget.Toolbar
+import androidx.appcompat.app.ActionBar.DISPLAY_SHOW_TITLE
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.sejo.uberclone.R
 import com.sejo.uberclone.databinding.ActivityMainBinding
@@ -21,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setSupportActionBar(binding.toolbar)
+        supportActionBar?.setDisplayOptions(0, DISPLAY_SHOW_TITLE)
         setContentView(view)
 
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.welcome_nav_host_fragment) as NavHostFragment

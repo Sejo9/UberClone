@@ -2,7 +2,10 @@ package com.sejo.uberclone.fragments
 
 import android.os.Build
 import android.os.Bundle
-import android.view.*
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
@@ -31,9 +34,7 @@ class GetStartedFragment : Fragment() {
             window.statusBarColor = resources.getColor(R.color.blue,null)
         }
 
-        binding.getStartedBtn.setOnClickListener(
-                Navigation.createNavigateOnClickListener(R.id.action_getStartedFragment_to_phoneNumberFragment)
-        )
+        binding.getStartedBtn.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_getStartedFragment_to_phoneNumberFragment))
 
         return binding.root
 

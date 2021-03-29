@@ -1,15 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">UberClone</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="uber">Uber</string>
     <string name="flag_for_the_country">Flag for the country</string>
     <string name="country">Country</string>
     <string name="choose_an_account">Choose an account</string>
     <string name="facebook">Facebook</string>
     <string name="google">Google</string>
     <string name="by_clicking_on_a_social_option_you_may_receive_an_sms_for_verification_messages_and_data_rates_may_apply">By clicking on a social option you may receive an SMS for verification. Messages and data rates may apply.</string>
-    <string name="please_enter_your_mobile_number">Please enter your mobile number</string>
     <string name="_233">+233</string>
     <string name="_023_123_4567">023 123 4567</string>
     <string name="or_connect_using_social_media">Or connect using social media</string>

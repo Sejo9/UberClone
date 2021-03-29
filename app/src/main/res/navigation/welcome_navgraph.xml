@@ -4,12 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/welcome_navgraph"
     app:startDestination="@id/getStartedFragment">
-
+    
     <fragment
         android:id="@+id/getStartedFragment"
         android:name="com.sejo.uberclone.fragments.GetStartedFragment"
-        android:label="fragment_get_started"
-        tools:layout="@layout/fragment_get_started" >
+        tools:layout="@layout/fragment_get_started">
         <action
             android:id="@+id/action_getStartedFragment_to_phoneNumberFragment"
             app:destination="@id/phoneNumberFragment" />
@@ -17,15 +16,34 @@
     <fragment
         android:id="@+id/phoneNumberFragment"
         android:name="com.sejo.uberclone.fragments.PhoneNumberFragment"
-        android:label="fragment_phone_number"
-        tools:layout="@layout/fragment_phone_number" >
+        tools:layout="@layout/fragment_phone_number">
         <action
             android:id="@+id/action_phoneNumberFragment_to_socialMediaConnectFragment"
             app:destination="@id/socialMediaConnectFragment" />
+        <action
+            android:id="@+id/action_phoneNumberFragment_to_countriesFragment"
+            app:destination="@id/countriesFragment" />
+        <argument
+            android:name="flag"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="code"
+            app:argType="string"
+            android:defaultValue="+233" />
     </fragment>
     <fragment
         android:id="@+id/socialMediaConnectFragment"
         android:name="com.sejo.uberclone.fragments.SocialMediaConnectFragment"
-        android:label="fragment_social_media_connect"
         tools:layout="@layout/fragment_social_media_connect" />
+    <fragment
+        android:id="@+id/countriesFragment"
+        android:name="com.sejo.uberclone.fragments.CountriesFragment"
+        tools:layout="@layout/fragment_countries">
+        <action
+            android:id="@+id/action_countriesFragment_to_phoneNumberFragment"
+            app:destination="@id/phoneNumberFragment"
+            app:popUpTo="@id/phoneNumberFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

@@ -1,14 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SocialMediaConnectFragment">
-
-    <!-- TODO: Update blank fragment layout -->
+    tools:context=".fragments.SocialMediaConnectFragment"
+    android:orientation="vertical">
+    
+    <TextView
+        android:id="@+id/social_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/choose_an_account"
+        android:textSize="22sp"
+        android:transitionName="sheader"
+        android:textColor="@color/black" />
+    
+    <TextView
+        android:id="@+id/facebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center_vertical"
+        android:text="@string/facebook"
+        android:textColor="@color/black"
+        android:drawablePadding="20dp"
+        app:drawableStartCompat="@drawable/ic_facebook_24" />
+    
+    <TextView
+        android:id="@+id/google"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/google"
+        android:textColor="@color/black"
+        android:gravity="center_vertical"
+        android:drawablePadding="20dp"
+        app:drawableStartCompat="@drawable/ic_google_24" />
+    
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/by_clicking_on_a_social_option_you_may_receive_an_sms_for_verification_messages_and_data_rates_may_apply"
+        android:textColor="@color/black"
+        app:lineHeight="20dp" />
 
-</FrameLayout>
+</LinearLayout>

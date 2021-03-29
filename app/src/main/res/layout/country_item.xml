@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="15dp"
+    android:background="?attr/selectableItemBackground">
+    
+    <ImageView
+        android:id="@+id/flag"
+        android:layout_width="36dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center_vertical"
+        tools:srcCompat="@drawable/ic_ghana_24"
+        android:contentDescription="@string/flag_for_the_country" />
+    
+    <TextView
+        android:id="@+id/code_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/country"
+        android:textColor="@color/black"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="10dp" />
+</LinearLayout>

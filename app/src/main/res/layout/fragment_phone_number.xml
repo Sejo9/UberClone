@@ -15,68 +15,92 @@
         app:layout_constraintTop_toTopOf="parent">
         
         <TextView
+            android:id="@+id/phone_header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:text="Please enter your mobile number"
+            android:layout_marginTop="10dp"
+            android:text="@string/please_enter_your_mobile_number"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="21sp"
-            android:transitionName="header" />
+            android:transitionName="pheader" />
         
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="20dp"
-            android:gravity="center_vertical"
             android:orientation="horizontal">
-            
+    
             <ImageView
+                android:id="@+id/phone_flag"
                 android:layout_width="48dp"
-                android:layout_height="32dp"
-                android:layout_gravity="center_vertical"
+                android:layout_height="24dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@null"
                 android:scaleType="fitCenter"
-                android:src="@mipmap/ic_launcher_round" />
-            
+                android:src="@drawable/ic_ghana_24" />
+    
             <ImageButton
+                android:id="@+id/country_picker_btn"
                 android:layout_width="24dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
+                android:layout_marginTop="15dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
                 android:src="@drawable/ic_arrow_down_16"
                 android:tint="@color/black"
-                android:background="?attr/selectableItemBackgroundBorderless"/>
-            
+                android:contentDescription="@null" />
+    
             <TextView
+                android:id="@+id/country_code"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingHorizontal="5dp"
-                android:text="+233"
+                android:text="@string/_233"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="22sp" />
-            
-            <EditText
+                android:textSize="20sp" />
+    
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/number_layout"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:hint="0231234567"
-                android:inputType="phone"
-                android:textColorHint="@android:color/darker_gray"
-                android:textSize="22sp"
-                app:backgroundTint="#000000"/>
+                app:hintEnabled="false"
+                android:backgroundTint="@color/black"
+                app:errorIconDrawable="@null"
+                app:errorTextAppearance="@style/TextAppearance.AppCompat.Subhead"
+                app:endIconMode="clear_text"
+                app:endIconDrawable="@drawable/ic_clear_16">
         
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:textSize="20sp"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:hint="@string/_023_123_4567"
+                    android:background="@color/white" />
+    
+            </com.google.android.material.textfield.TextInputLayout>
+
+
         </LinearLayout>
         
         <TextView
+            android:id="@+id/social_connect"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:drawablePadding="5dp"
             android:gravity="center_vertical"
-            android:text="Or connect using social media"
+            android:text="@string/or_connect_using_social_media"
             android:textColor="@color/blue"
             android:textSize="18sp"
             app:drawableEndCompat="@drawable/ic_arrow_forward_32"
@@ -97,19 +121,22 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
+            android:layout_marginEnd="20dp"
             android:layout_weight="1"
-            android:text="By continuing you may receive an SMS for verification. Message and data rates may apply."
+            android:text="@string/by_continuing_you_may_receive_an_sms_for_verification_message_and_data_rates_may_apply"
             app:lineHeight="20dp" />
     
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/phone_next_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="35dp"
             android:src="@drawable/ic_arrow_forward_32"
             app:backgroundTint="#000000"
             app:tint="#FFFFFF"
-            app:rippleColor="#D6D6D6" />
+            app:rippleColor="#D6D6D6"
+            android:transitionName="forward"
+            android:contentDescription="@null" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
